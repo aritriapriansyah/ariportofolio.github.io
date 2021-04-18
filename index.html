@@ -187,7 +187,16 @@
                         <p>Make a vector design. See my Vector Collection</p> <a href="https://instagram.com/mayhemstudio13/">here </a> 
                     </footer>
                     </div>
+                    </div>
+                <div class="card">
+                    <div class="box">
+                        <img src="images/learning.jpg" alt="">
+                        <div class="text">CPNS</div>
+                        <p>Get for free</p> <a href="https://drive.google.com/drive/folders/1SsisyJq0r73BfP_rGDqL5zCtiZtcs3Af?usp=sharing">here </a> 
+                    </footer>
+                    </div>
                 </div>
+                <div class="card">
                 <div class="card">
                     <div class="box">
                         <img src="images/ari3.jpg" alt="">
@@ -261,5 +270,17 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbygkUpGkqRKr_snrEdfnzp6qxrQxafxzQ6M2_WrRF46BD9id28JMsI4x2zliJZDKsI/exec'
+        const form = document.forms['ariportofolio']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
